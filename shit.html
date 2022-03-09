@@ -1,0 +1,109 @@
+<body class="bg-orange-200">
+    <header class="flex justify-around pt-10 pb-10 bg-sky-400">
+      <div class="">
+        <h1 class="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600 flex justify-center">Perfect Night Out</h1>
+        <div class="flex leading-tight text-xl m-10 text-white justify-center text-center">
+          <p>
+            [lorem ipsum]
+          </p>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="flex justify-center">
+          <div class="block p-10 rounded-lg shadow-lg bg-white max-w-sm">
+            <form>
+              <div class="form-group mb-6">
+                <label for="zipcode" class="form-label inline-block flex justify-center mb-2 text-gray-700">Enter your zip code:</label>
+                <input type="number" class="form-control
+                  block
+                  w-full
+                  text-center
+                  px-3
+                  py-1.5
+                  text-base
+                  font-normal
+                  text-gray-700
+                  bg-white bg-clip-padding
+                  border border-solid border-gray-300
+                  rounded
+                  transition
+                  ease-in-out
+                  m-0
+                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
+                  id="input-zipcode"
+                  placeholder="Zip Code">
+              </div>
+              <div class="flex justify-center mb-6">
+                <div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="include-restaurants">
+                    <label class="form-check-label inline-block text-gray-800" for="restaurant">
+                      Include Restaurants
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input ml-3 appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="include-movies">
+                    <label class="form-check-label inline-block text-gray-800" for="movies">
+                      Include Movies
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="
+                w-full
+                px-6
+                py-2.5
+                bg-blue-600
+                text-white
+                font-medium
+                text-xs
+                leading-tight
+                uppercase
+                rounded
+                shadow-md
+                hover:bg-blue-700 hover:shadow-lg
+                focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+                active:bg-blue-800 active:shadow-lg
+                transition
+                duration-150
+                ease-in-out">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Container for Sub Sections-->
+      <div class="flex justify-center">
+        <!-- Left Column: Restaurant -->
+        <div class="bg-sky-400">
+          <!-- Restaurant Output -->
+          <div class="rounded-lg shadow-lg bg-sky-50 max-w-sm">
+            <img class="rounded-t-lg" src="./assets/images/placeholder.png"/>
+            <div class="p-6">
+              <h5 class="text-gray-900 text-xl font-medium mb-2">Card Title</h5>
+              <p class="text-gray-700 text-base mb-4">
+                Some quick example text to build on the card title content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Movie -->
+        <div class="bg-sky-400">
+          <!-- Movie Output -->
+          <div class="rounded-lg shadow-lg bg-sky-50 max-w-sm">
+            <img class="rounded-t-lg" src="./assets/images/placeholder.png"/>
+            <div class="p-6">
+              <h5 class="text-gray-900 text-xl font-medium mb-2">Card Title</h5>
+              <p class="text-gray-700 text-base mb-4">
+                Some quick example text to build on the card title content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
