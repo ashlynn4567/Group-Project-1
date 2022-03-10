@@ -8,31 +8,138 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Perfect Night Out</title>
   </head>
-  <body>
-    <header>
-      <h1>Perfect Night Out</h1>
+
+  <!-- Colors:
+    Orange: orange-400
+    Orange-White: orange-100
+    White: neutral-50
+    Black: gray-800
+    Light Blue: sky-300
+    Dark Blue: sky-700
+  -->
+
+  <body class="font-sans text-center">
+    <header class="bg-sky-700 h-150 box-border">
+      <div class="pt-10">
+        <span class="inline text-4xl pr-3 pl-3">&#10024;</span>
+        <h1 class="inline font-bold text-5xl text-sky-300 pt-10 pr-2 pl-2">
+          Perfect
+        </h1>
+        <span class="inline text-4xl pr-3 pl-3">&#10024;</span>
+      </div>
+      <h1 class="font-bold text-5xl text-sky-300 pr-2 pl-2 mb-10">Night Out</h1>
+      <p class="text-lg text-neutral-50 ml-10 mr-10">
+        This app will help you plan a fun night out just by entering your
+        zipcode!
+      </p>
+      <div class="pl-10 pr-10 pt-10 pb-20 flex justify-center">
+        <div class="block p-10 rounded-lg shadow-lg bg-orange-100 max-w-sm">
+          <form>
+            <div class="form-group mb-6">
+              <label
+                for="zipcode"
+                class="form-label inline-block flex justify-center mb-2 text-gray-800"
+                >Enter your zip code:</label
+              >
+              <input
+                type="number"
+                class="form-control block w-full text-center px-3 py-1.5 text-base font-normal text-gray-800 bg-neutral-50-clip-padding border border-solid border-2 border-sky-700 rounded transition ease-in-out m-0 focus:text-gray-800 focus:bg-white focus:border-blue-600 focus:outline-none"
+                id="input-zipcode"
+                placeholder="Zip Code"
+                maxlength="5"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              />
+            </div>
+            <div class="flex justify-center mb-6">
+              <div>
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input appearance-none h-4 w-4 border border-2 border-sky-700 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    type="checkbox"
+                    value=""
+                    id="include-restaurants"
+                  />
+                  <label
+                    class="form-check-label inline-block text-gray-800"
+                    for="restaurant"
+                  >
+                    Include Restaurants
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input ml-2 appearance-none h-4 w-4 border border-2 border-sky-700 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    type="checkbox"
+                    value=""
+                    id="include-movies"
+                  />
+                  <label
+                    class="form-check-label inline-block text-gray-800"
+                    for="movies"
+                  >
+                    Include Movies
+                  </label>
+                </div>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="w-full px-6 py-2.5 bg-orange-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
     </header>
 
     <main>
-      <!-- Conatiner -->
-      <div class="container mx-auto">
-        <!-- Left Column: Google Calendar -->
-        <div class="columns-4"></div>
-
-        <!-- Middle Column: Restaurant -->
-        <div class="columns-4">
-          <!-- Restaurant Search Form -->
-          <div></div>
-          <!-- Restaurant Output -->
-          <div></div>
+      <!-- Container -->
+      <div class="">
+        <!-- Left Column: Food -->
+        <div class="bg-orange-100 h-150 box-border">
+          <div class="p-10">
+            <span class="inline text-4xl pr-3 pl-3">&#127790;</span>
+            <h2
+              class="inline font-bold text-5xl text-orange-400 pt-10 pr-2 pl-2"
+            >
+              Food
+            </h2>
+            <span class="inline text-4xl pr-3 pl-3">&#127790;</span>
+          </div>
+          <div
+            class="flex justify-center bg-sky-300 ml-10 mr-10 p-10 rounded-lg shadow-lg"
+          >
+            <ul>
+              <li>
+                <img src="./assets/images/placeholder.png" width="175px" />
+              </li>
+              <li>
+                <img src="./assets/images/placeholder.png" width="175px" />
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Right Column: Movie -->
-        <div class="columns-4">
-          <!-- Restaurant Search Form -->
-          <div></div>
-          <!-- Restaurant Output -->
-          <div></div>
+        <div class="bg-sky-700 h-150 box-border">
+          <div class="p-10">
+            <span class="inline text-4xl pr-3">&#127909;</span>
+            <h2 class="inline font-bold text-5xl text-sky-300 pt-10">Movies</h2>
+            <span class="inline text-4xl pl-3">&#127909;</span>
+          </div>
+          <div
+            class="flex justify-center bg-orange-100 ml-10 mr-10 p-10 rounded-lg shadow-lg"
+          >
+            <ul>
+              <li>
+                <img src="./assets/images/placeholder.png" width="175px" />
+              </li>
+              <li>
+                <img src="./assets/images/placeholder.png" width="175px" />
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </main>
