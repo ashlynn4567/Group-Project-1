@@ -125,8 +125,11 @@ var displayMovies = function (moviesData) {
 
     // display showtimes & theaters
     $.each(movie.showtimes, function (index, showtime) {
-      let newDate = new Date(showtime.dateTime);
-      movieTime = newDate.toLocaleTimeString();
+      var newDate = new Date(showtime.dateTime);
+      movieTime = newDate.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
 
       // create elements for showtimes
       var showtimesUl = $("<ul>");
