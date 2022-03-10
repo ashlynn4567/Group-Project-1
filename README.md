@@ -41,14 +41,10 @@ In the future, I would like to add the following improvements:
 
 ### Contributers
 
-- <a href="mailto:ashlynn4567@gmail.com">Email<a>
-- <a href="https://github.com/ashlynn4567">GitHub<a>
-- <a href="www.linkedin.com/in/Ashley-Lynn-Smith">LinkedIn<a>
-
-| **Ashley Smith**                           | **Kelsey Alderman**                           | **Jackson Mason**                         | **Mohamed Abdullahi**                 |
-| ------------------------------------------ | --------------------------------------------- | ----------------------------------------- | ------------------------------------- |
-| - [Github](https://github.com/ashlynn4567) | - [Github](https://github.com/kelseyalderman) | - [Github](https://github.com/ShibuyaCho) | - [Github](https://github.com/mo9399) |
-| - [LinkedIn](lorem ipsum)                  | - [LinkedIn](lorem ipsum)                     | - [LinkedIn](lorem ipsum)                 | - [LinkedIn](lorem ipsum)             |
+| **Ashley Smith**                                    | **Kelsey Alderman**                                                 | **Jackson Mason**                         | **Mohamed Abdullahi**                 |
+| --------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------- | ------------------------------------- |
+| - [Github](https://github.com/ashlynn4567)          | - [Github](https://github.com/kelseyalderman)                       | - [Github](https://github.com/ShibuyaCho) | - [Github](https://github.com/mo9399) |
+| - [LinkedIn](www.linkedin.com/in/Ashley-Lynn-Smith) | - [LinkedIn](https://www.linkedin.com/in/kelsey-alderman-79019922b) | - [LinkedIn](lorem ipsum)                 | - [LinkedIn](lorem ipsum)             |
 
 ### Acknowledgements
 
