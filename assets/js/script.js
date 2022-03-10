@@ -69,7 +69,6 @@ var getMovies = function (zip) {
       if (response.ok) {
         console.log(response);
         response.json().then(function (data) {
-          console.log(data);
           displayMovies(data);
         });
       } else {
@@ -104,8 +103,6 @@ var displayMovies = function (moviesData) {
 
   // display movie title
   $.each(moviesData, function (index, movie) {
-    console.log(movie.title);
-
     // create elements for movie card
     var movieCard = $("<div>").addClass("p-10");
     var movieLi = $("<li>").addClass("rounded-lg shadow-lg bg-white max-w-sm");
@@ -128,8 +125,8 @@ var displayMovies = function (moviesData) {
 
     // display showtimes & theaters
     $.each(movie.showtimes, function (index, showtime) {
-      console.log(showtime.theatre.name);
-      console.log(showtime.dateTime);
+      let newDate = new Date(showtime.dateTime);
+      movieTime = newDate.toLocaleTimeString();
 
       // create elements for showtimes
       var showtimesUl = $("<ul>");
@@ -140,7 +137,7 @@ var displayMovies = function (moviesData) {
 
       var showtimeP = $("<p>")
         .addClass("text-gray-800 text-base mb-4")
-        .text(showtime.theatre.name + " - " + showtime.dateTime);
+        .text(showtime.theatre.name + " - " + movieTime);
 
       showtimeLi.append(showtimeP);
       movieCardBody.append(showtimesUl);
