@@ -30,13 +30,13 @@ var eventsContainerEl = document.querySelector("#events-container");
 
 // function to get restaurants
 var getRestaurants = function (zip) {
-  // format the github api url
+  // format the restaurants api url
   var apiRestarauntsUrl =
     "https://api.documenu.com/v2/restaurants/zip_code/" +
     zip +
     "?&key=eda9aa817e609c57e8a4a9e40109f7d9";
 
-  // make a get request to url
+  // make a request to url
   fetch(apiRestarauntsUrl)
     .then(function (response) {
       // request was successful
@@ -54,4 +54,33 @@ var getRestaurants = function (zip) {
     });
 };
 
+// function to get movies
+var getMovies = function (zip) {
+  // format the movies api url
+  var apiMoviesUrl =
+    "http://data.tmsapi.com/v1.1/movies/showings?startDate=" +
+    date +
+    "&zip=" +
+    zip +
+    "&api_key=yhya8sn6myd6z9exxw4538ph";
+
+  // make a request to url
+  fetch(apiMoviesUrl)
+    .then(function (response) {
+      // request was successful
+      if (response.ok) {
+        console.log(response);
+        response.json().then(function (data) {
+          console.log(data);
+        });
+      } else {
+        alert("Error: " + response.statusText);
+      }
+    })
+    .catch(function (error) {
+      alert("Unable to connect");
+    });
+};
+
 getRestaurants("97212");
+getMovies("97212");
