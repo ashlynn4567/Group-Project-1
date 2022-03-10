@@ -81,6 +81,17 @@ var getMovies = function (zip) {
       alert("Unable to connect");
     });
 };
+//add DATE YO - JACKSON
+function addLeadingZeros(n) {
+  if (n <= 9) {
+    return "0" + n;
+  }
+  return n
+}
+
+let currentDate = new Date()
+let formattedDate = currentDate.getFullYear() + "-" + addLeadingZeros(currentDate.getMonth() + 1) + "-" + addLeadingZeros(currentDate.getDate())
+console.log(formattedDate);
 
 //add DATE YO - JACKSON
 function addLeadingZeros(n) {
