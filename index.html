@@ -12,7 +12,7 @@
   <!-- Colors:
     Orange: orange-400
     Orange-White: orange-100
-    White: neutral-50
+    White: white
     Black: gray-800
     Light Blue: sky-300
     Dark Blue: sky-700
@@ -22,13 +22,13 @@
     <header class="bg-sky-700 h-150 box-border">
       <div class="pt-10">
         <span class="inline text-4xl pr-3 pl-3">&#10024;</span>
-        <h1 class="inline font-bold text-5xl text-sky-300 pt-10 pr-2 pl-2">
+        <h1 class="inline font-bold text-5xl text-sky-300 pr-2 pl-2">
           Perfect
         </h1>
         <span class="inline text-4xl pr-3 pl-3">&#10024;</span>
       </div>
       <h1 class="font-bold text-5xl text-sky-300 pr-2 pl-2 mb-10">Night Out</h1>
-      <p class="text-lg text-neutral-50 ml-10 mr-10">
+      <p class="text-lg text-white ml-10 mr-10">
         This app will help you plan a fun night out just by entering your
         zipcode!
       </p>
@@ -43,7 +43,7 @@
               >
               <input
                 type="number"
-                class="form-control block w-full text-center px-3 py-1.5 text-base font-normal text-gray-800 bg-neutral-50-clip-padding border border-solid border-2 border-sky-700 rounded transition ease-in-out m-0 focus:text-gray-800 focus:bg-white focus:border-blue-600 focus:outline-none"
+                class="form-control block w-full text-center px-3 py-1.5 text-base font-normal text-gray-800 bg-white-clip-padding border border-solid border-2 border-sky-700 rounded transition ease-in-out m-0 focus:text-gray-800 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="input-zipcode"
                 placeholder="Zip Code"
                 maxlength="5"
@@ -97,48 +97,214 @@
       <!-- Container -->
       <div class="">
         <!-- Left Column: Food -->
-        <div class="bg-orange-100 h-150 box-border">
-          <div class="p-10">
-            <span class="inline text-4xl pr-3 pl-3">&#127790;</span>
-            <h2
-              class="inline font-bold text-5xl text-orange-400 pt-10 pr-2 pl-2"
-            >
+        <div class="bg-orange-100 box-border h-screen">
+          <div class="pr-10 pl-10 pt-10">
+            <span class="inline text-4xl pr-2">&#127790;</span>
+            <h2 class="inline font-bold text-5xl text-orange-400 pr-2 pl-2">
               Food
             </h2>
-            <span class="inline text-4xl pr-3 pl-3">&#127790;</span>
+            <span class="inline text-4xl">&#127790;</span>
           </div>
           <div
-            class="flex justify-center bg-sky-300 ml-10 mr-10 p-10 rounded-lg shadow-lg"
+            class="flex justify-center h-3/4 overflow-auto bg-sky-300 m-10 rounded-lg shadow-lg"
           >
-            <ul>
-              <li>
-                <img src="./assets/images/placeholder.png" width="175px" />
-              </li>
-              <li>
-                <img src="./assets/images/placeholder.png" width="175px" />
-              </li>
+            <ul class="pt-5 pb-5">
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-6">
+                    <h5 class="text-gray-800 text-xl font-medium mb-5">
+                      Restaurant Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-4">
+                      Address: <span class="">Placeholder</span>
+                      <br></br>
+                      Website: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-6">
+                    <h5 class="text-gray-800 text-xl font-medium mb-5">
+                      Restaurant Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-4">
+                      Address: <span class="">Placeholder</span>
+                      <br></br>
+                      Website: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-6">
+                    <h5 class="text-gray-800 text-xl font-medium mb-5">
+                      Restaurant Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-4">
+                      Address: <span class="">Placeholder</span>
+                      <br></br>
+                      Website: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-6">
+                    <h5 class="text-gray-800 text-xl font-medium mb-5">
+                      Restaurant Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-4">
+                      Address: <span class="">Placeholder</span>
+                      <br></br>
+                      Website: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-6">
+                    <h5 class="text-gray-800 text-xl font-medium mb-5">
+                      Restaurant Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-4">
+                      Address: <span class="">Placeholder</span>
+                      <br></br>
+                      Website: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
             </ul>
           </div>
         </div>
 
         <!-- Right Column: Movie -->
-        <div class="bg-sky-700 h-150 box-border">
-          <div class="p-10">
-            <span class="inline text-4xl pr-3">&#127909;</span>
-            <h2 class="inline font-bold text-5xl text-sky-300 pt-10">Movies</h2>
-            <span class="inline text-4xl pl-3">&#127909;</span>
+        <div class="bg-sky-700 box-border h-screen">
+          <div class="pr-10 pl-10 pt-10">
+            <span class="inline text-3xl pr-2">&#127909;</span>
+            <h2 class="inline font-bold text-5xl text-sky-300">Movies</h2>
+            <span class="inline text-3xl pl-2">&#127909;</span>
           </div>
           <div
-            class="flex justify-center bg-orange-100 ml-10 mr-10 p-10 rounded-lg shadow-lg"
+            class="flex justify-center h-3/4 overflow-auto bg-orange-100 m-10 rounded-lg shadow-lg"
           >
-            <ul>
-              <li>
-                <img src="./assets/images/placeholder.png" width="175px" />
+          <ul class="pt-5 pb-5">
+            <div class="p-10">
+              <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                <img
+                  class="rounded-lg"
+                  src="./assets/images/placeholder.png"
+                />
+                <div class="p-6">
+                  <h5 class="text-gray-800 text-xl font-medium mb-5">
+                    Movie Name
+                  </h5>
+                  <p class="text-gray-800 text-base mb-4">
+                    Theater: <span class="">Placeholder</span>
+                    <br></br>
+                    Showtimes: <span class="">Placeholder</span>
+                  </p>
+                </div>
               </li>
-              <li>
-                <img src="./assets/images/placeholder.png" width="175px" />
+            </div>
+            <div class="p-10">
+              <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                <img
+                  class="rounded-lg"
+                  src="./assets/images/placeholder.png"
+                />
+                <div class="p-6">
+                  <h5 class="text-gray-800 text-xl font-medium mb-5">
+                    Movie Name
+                  </h5>
+                  <p class="text-gray-800 text-base mb-4">
+                    Theater: <span class="">Placeholder</span>
+                    <br></br>
+                    Showtimes: <span class="">Placeholder</span>
+                  </p>
+                </div>
               </li>
-            </ul>
+            </div>
+            <div class="p-10">
+              <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                <img
+                  class="rounded-lg"
+                  src="./assets/images/placeholder.png"
+                />
+                <div class="p-6">
+                  <h5 class="text-gray-800 text-xl font-medium mb-5">
+                    Movie Name
+                  </h5>
+                  <p class="text-gray-800 text-base mb-4">
+                    Theater: <span class="">Placeholder</span>
+                    <br></br>
+                    Showtimes: <span class="">Placeholder</span>
+                  </p>
+                </div>
+              </li>
+            </div>
+            <div class="p-10">
+              <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                <img
+                  class="rounded-lg"
+                  src="./assets/images/placeholder.png"
+                />
+                <div class="p-6">
+                  <h5 class="text-gray-800 text-xl font-medium mb-5">
+                    Movie Name
+                  </h5>
+                  <p class="text-gray-800 text-base mb-4">
+                    Theater: <span class="">Placeholder</span>
+                    <br></br>
+                    Showtimes: <span class="">Placeholder</span>
+                  </p>
+                </div>
+              </li>
+            </div>
+            <div class="p-10">
+              <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                <img
+                  class="rounded-lg"
+                  src="./assets/images/placeholder.png"
+                />
+                <div class="p-6">
+                  <h5 class="text-gray-800 text-xl font-medium mb-5">
+                    Movie Name
+                  </h5>
+                  <p class="text-gray-800 text-base mb-4">
+                    Theater: <span class="">Placeholder</span>
+                    <br></br>
+                    Showtimes: <span class="">Placeholder</span>
+                  </p>
+                </div>
+              </li>
+            </div>
+          </ul>
           </div>
         </div>
       </div>
