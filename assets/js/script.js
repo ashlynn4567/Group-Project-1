@@ -16,7 +16,7 @@ var formSubmitHandler = function (event) {
   var zipCode = zipInputEl.value.trim();
 
   if (zipCode) {
-    getRestaurants(zipCode);
+    // getRestaurants(zipCode);
     getMovies(zipCode);
 
     //     // clear old content
@@ -28,31 +28,29 @@ var formSubmitHandler = function (event) {
   }
 };
 
-// function to get restaurants
-var getRestaurants = function (zip) {
-  // format the restaurants api url
-  var apiRestaurantsUrl =
-    "https://api.documenu.com/v2/restaurants/zip_code/" +
-    zip +
-    "?&key=eda9aa817e609c57e8a4a9e40109f7d9";
+// // function to get restaurants
+// var getRestaurants = function (zip) {
+//   // format the restaurants api url
+//   var apiRestaurantsUrl =
+//     "http://opentable.herokuapp.com/api/restaurants?zip=" + zip;
 
-  // make a request to url
-  fetch(apiRestaurantsUrl)
-    .then(function (response) {
-      // request was successful
-      if (response.ok) {
-        console.log(response);
-        response.json().then(function (data) {
-          console.log(data);
-        });
-      } else {
-        alert("Error: " + response.statusText);
-      }
-    })
-    .catch(function (error) {
-      alert("Unable to connect to Documenu");
-    });
-};
+//   // make a request to url
+//   fetch(apiRestaurantsUrl)
+//     .then(function (response) {
+//       // request was successful
+//       if (response.ok) {
+//         console.log(response);
+//         response.json().then(function (data) {
+//           console.log(data);
+//         });
+//       } else {
+//         alert("Error: " + response.statusText);
+//       }
+//     })
+//     .catch(function (error) {
+//       alert("Unable to connect to Documenu");
+//     });
+// };
 
 // function to get movies
 var getMovies = function (zip) {
@@ -72,6 +70,7 @@ var getMovies = function (zip) {
         console.log(response);
         response.json().then(function (data) {
           console.log(data);
+          displayMovies(data);
         });
       } else {
         alert("Error: " + response.statusText);
@@ -99,32 +98,57 @@ let formattedDate =
   addLeadingZeros(currentDate.getDate());
 console.log(formattedDate);
 
-var displayRestaraunts = function (restaurantsData) {
+var displayMovies = function (moviesData) {
   // clear any previous entries in restaurant section
-  $("#restaurants").empty();
+  // $("#movies").empty();
 
-  // get data for 15 restaurants
-  for (i = 1; i <= 15; i++) {
-    // create elements for restaurant card
-    var restaurantCard = $("<div>").addClass("p-10");
-    var restaurantLi = $("<li>").addClass(
-      "rounded-lg shadow-lg bg-white max-w-sm"
-    );
+  // display movie title
+  $.each(moviesData, function (index, movie) {
+    console.log(movie.title);
+
+    // create elements for movie card
+    var movieCard = $("<div>").addClass("p-10");
+    var movieLi = $("<li>").addClass("rounded-lg shadow-lg bg-white max-w-sm");
 
     // append <li> to <div> restaurant card
-    restaurantCard.append(restaurantLi);
+    movieCard.append(movieLi);
 
     // create elements for restaurant card body
-    var restaurantCardBody = $("<div>").addClass("p-6");
+    var movieCardBody = $("<div>").addClass("p-6");
 
     // append <div> to <li>
-    restaurantLi.append(restaurantCardBody);
+    movieLi.append(movieCardBody);
 
-    // create elements for restaurant card content
-    var restaurantName = $("<h5>")
+    // create element for movie title content
+    var movieName = $("<h5>")
       .addClass("text-gray-800 text-xl font-medium mb-5")
-      .text(restaurantsData[i].restaurant_name);
-  }
+      .text(movie.title);
+
+    movieCardBody.append(movieName);
+
+    // display showtimes & theaters
+    $.each(movie.showtimes, function (index, showtime) {
+      console.log(showtime.theatre.name);
+      console.log(showtime.dateTime);
+
+      // create elements for showtimes
+      var showtimesUl = $("<ul>");
+      var showtimeLi = $("<li>");
+
+      // append <li> to <ul>
+      showtimesUl.append(showtimeLi);
+
+      var showtimeP = $("<p>")
+        .addClass("text-gray-800 text-base mb-4")
+        .text(showtime.theatre.name + " - " + showtime.dateTime);
+
+      showtimeLi.append(showtimeP);
+      movieCardBody.append(showtimesUl);
+    });
+
+    // append card to movie <ul> on page
+    $("#movies").append(movieCard);
+  });
 };
 
 // event handler
