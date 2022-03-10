@@ -1,5 +1,5 @@
-// input form id = zipcode
-var zipInputEl = document.querySelector("#zipcode");
+// get zipcode from input form
+var zipInputEl = document.querySelector("#input-zipcode");
 
 // restaurants container id = restaurants-container
 var restaurantsContainerEl = document.querySelector("#restaurants-container");
@@ -7,26 +7,26 @@ var restaurantsContainerEl = document.querySelector("#restaurants-container");
 // events container id = events-container
 var eventsContainerEl = document.querySelector("#events-container");
 
-// // search form submit handler
-// var formSubmitHandler = function (event) {
-//   // prevent page from refreshing
-//   event.preventDefault();
+// search form submit handler
+var formSubmitHandler = function (event) {
+  // prevent page from refreshing
+  event.preventDefault();
 
-//   // get value from input element
-//   var zipCode = zipInputEl.value.trim();
+  // get value from input element
+  var zipCode = zipInputEl.value.trim();
 
-//   if (zipCode) {
-//     getRestaurants(zipCode);
-//     getEvents(zipCode);
+  if (zipCode) {
+    getRestaurants(zipCode);
+    getMovies(zipCode);
 
-//     // clear old content
-//     restaurantsContainerEl.textContent = "";
-//     eventsContainerEl.textContent = "";
-//     zipInputEl.value = "";
-//   } else {
-//     alert("Please enter a zip code");
-//   }
-// };
+    //     // clear old content
+    //     restaurantsContainerEl.textContent = "";
+    //     eventsContainerEl.textContent = "";
+    //     zipInputEl.value = "";
+    //   } else {
+    //     alert("Please enter a zip code");
+  }
+};
 
 // function to get restaurants
 var getRestaurants = function (zip) {
@@ -59,7 +59,7 @@ var getMovies = function (zip) {
   // format the movies api url
   var apiMoviesUrl =
     "http://data.tmsapi.com/v1.1/movies/showings?startDate=" +
-    date +
+    formattedDate +
     "&zip=" +
     zip +
     "&api_key=yhya8sn6myd6z9exxw4538ph";
@@ -81,6 +81,34 @@ var getMovies = function (zip) {
       alert("Unable to connect");
     });
 };
+//add DATE YO - JACKSON
+function addLeadingZeros(n) {
+  if (n <= 9) {
+    return "0" + n;
+  }
+  return n
+}
 
-getRestaurants("97212");
-getMovies("97212");
+let currentDate = new Date()
+let formattedDate = currentDate.getFullYear() + "-" + addLeadingZeros(currentDate.getMonth() + 1) + "-" + addLeadingZeros(currentDate.getDate())
+console.log(formattedDate);
+
+//add DATE YO - JACKSON
+function addLeadingZeros(n) {
+  if (n <= 9) {
+    return "0" + n;
+  }
+  return n;
+}
+
+let currentDate = new Date();
+let formattedDate =
+  currentDate.getFullYear() +
+  "-" +
+  addLeadingZeros(currentDate.getMonth() + 1) +
+  "-" +
+  addLeadingZeros(currentDate.getDate());
+console.log(formattedDate);
+
+// event handler
+$("#submit").on("click", formSubmitHandler);
