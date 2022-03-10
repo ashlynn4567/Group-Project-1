@@ -16,7 +16,7 @@ var formSubmitHandler = function (event) {
   var zipCode = zipInputEl.value.trim();
 
   if (zipCode) {
-    // getRestaurants(zipCode);
+    getRestaurants(zipCode);
     getMovies(zipCode);
 
     //     // clear old content
@@ -28,29 +28,29 @@ var formSubmitHandler = function (event) {
   }
 };
 
-// // function to get restaurants
-// var getRestaurants = function (zip) {
-//   // format the restaurants api url
-//   var apiRestaurantsUrl =
-//     "http://opentable.herokuapp.com/api/restaurants?zip=" + zip;
+// function to get restaurants
+var getRestaurants = function (zip) {
+  // format the restaurants api url
+  var apiRestaurantsUrl =
+    "https://api.openbrewerydb.org/breweries?by_postal=" + zip;
 
-//   // make a request to url
-//   fetch(apiRestaurantsUrl)
-//     .then(function (response) {
-//       // request was successful
-//       if (response.ok) {
-//         console.log(response);
-//         response.json().then(function (data) {
-//           console.log(data);
-//         });
-//       } else {
-//         alert("Error: " + response.statusText);
-//       }
-//     })
-//     .catch(function (error) {
-//       alert("Unable to connect to Documenu");
-//     });
-// };
+  // make a request to url
+  fetch(apiRestaurantsUrl)
+    .then(function (response) {
+      // request was successful
+      if (response.ok) {
+        console.log(response);
+        response.json().then(function (data) {
+          console.log(data);
+        });
+      } else {
+        alert("Error: " + response.statusText);
+      }
+    })
+    .catch(function (error) {
+      alert("Unable to connect to Documenu");
+    });
+};
 
 // function to get movies
 var getMovies = function (zip) {
