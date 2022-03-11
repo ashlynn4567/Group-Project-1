@@ -29,7 +29,7 @@ This is how the main page appears to users. The page is responsive, adapting to 
 
 ## Deployed Site
 
-<a href="">Plan the perfect night out!<a>
+<a href="https://ashlynn4567.github.io/Group-Project-1/">Plan the perfect night out!<a>
 
 ## Suggestion Box
 
@@ -41,14 +41,10 @@ In the future, I would like to add the following improvements:
 
 ### Contributers
 
-- <a href="mailto:ashlynn4567@gmail.com">Email<a>
-- <a href="https://github.com/ashlynn4567">GitHub<a>
-- <a href="www.linkedin.com/in/Ashley-Lynn-Smith">LinkedIn<a>
-
-| **Ashley Smith**                           | **Kelsey Alderman**                           | **Jackson Mason**                         | **Mohamed Abdullahi**                 |
-| ------------------------------------------ | --------------------------------------------- | ----------------------------------------- | ------------------------------------- |
-| - [Github](https://github.com/ashlynn4567) | - [Github](https://github.com/kelseyalderman) | - [Github](https://github.com/ShibuyaCho) | - [Github](https://github.com/mo9399) |
-| - [LinkedIn](lorem ipsum)                  | - [LinkedIn](lorem ipsum)                     | - [LinkedIn](lorem ipsum)                 | - [LinkedIn](lorem ipsum)             |
+| **Ashley Smith**                                    | **Kelsey Alderman**                                                 | **Jackson Mason**                         | **Mohamed Abdullahi**                 |
+| --------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------- | ------------------------------------- |
+| - [Github](https://github.com/ashlynn4567)          | - [Github](https://github.com/kelseyalderman)                       | - [Github](https://github.com/ShibuyaCho) | - [Github](https://github.com/mo9399) |
+| - [LinkedIn](https://www.linkedin.com/in/ashley-lynn-smith/) | - [LinkedIn](https://www.linkedin.com/in/kelsey-alderman-79019922b) | - [LinkedIn](lorem ipsum)                 | - [LinkedIn](lorem ipsum)             |
 
 ### Acknowledgements
 

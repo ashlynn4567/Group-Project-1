@@ -9,6 +9,8 @@
     <title>Perfect Night Out</title>
   </head>
 
+
+
   <!-- Colors:
     Orange: orange-400
     Orange-White: orange-100
@@ -18,8 +20,13 @@
     Dark Blue: sky-700
   -->
 
+
+
   <body class="font-sans text-center">
+
+    <!--Header Section-->
     <header class="bg-sky-700 h-150 box-border">
+      <!--Header: Title and Subtitle-->
       <div class="pt-10">
         <span class="inline text-4xl pr-3 pl-3">&#10024;</span>
         <h1 class="inline font-bold text-5xl text-sky-300 pr-2 pl-2">
@@ -32,9 +39,13 @@
         This app will help you plan a fun night out just by entering your
         zipcode!
       </p>
+      <!--End Title and Subtitle-->
+
+      <!--Header: Input Form-->
       <div class="pl-10 pr-10 pt-10 pb-20 flex justify-center">
         <div class="block p-10 rounded-lg shadow-lg bg-orange-100 max-w-sm">
           <form>
+            <!--Header Input Form: Zip Code-->
             <div class="form-group mb-6">
               <label
                 for="zipcode"
@@ -42,7 +53,7 @@
                 >Enter your zip code:</label
               >
               <input
-                type="number"
+                type="text"
                 class="form-control block w-full text-center px-3 py-1.5 text-base font-normal text-gray-800 bg-white-clip-padding border border-solid border-2 border-sky-700 rounded transition ease-in-out m-0 focus:text-gray-800 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="input-zipcode"
                 placeholder="Zip Code"
@@ -50,8 +61,11 @@
                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
               />
             </div>
+            <!--End Zip Code-->
+            <!--Header Input Form: Checkboxes-->
             <div class="flex justify-center mb-6">
               <div>
+                <!--Restaurant Checkbox-->
                 <div class="form-check mb-2">
                   <input
                     class="form-check-input appearance-none h-4 w-4 border border-2 border-sky-700 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
@@ -66,6 +80,8 @@
                     Include Restaurants
                   </label>
                 </div>
+                <!--End Restaurant Checkbox-->
+                <!--Movie Checkbox-->
                 <div class="form-check">
                   <input
                     class="form-check-input ml-2 appearance-none h-4 w-4 border border-2 border-sky-700 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
@@ -80,8 +96,11 @@
                     Include Movies
                   </label>
                 </div>
+                <!--End Movie Checkbox-->
               </div>
             </div>
+            <!--End Checkboxes-->
+            <!--Submit Button-->
             <button
               type="submit"
               id="submit"
@@ -89,16 +108,22 @@
             >
               Submit
             </button>
+            <!--End Submit Button-->
           </form>
         </div>
       </div>
+      <!--End Input Form-->
     </header>
+    <!--End Header Section-->
+
+
 
     <main>
-      <!-- Container -->
-      <div class="">
-        <!-- Left Column: Food -->
-        <div class="bg-orange-100 box-border h-screen">
+      <!-- Body Section -->
+      <div class="flex flex-wrap">
+        <!-- Food -->
+        <div class="bg-orange-100 box-border h-screen w-screen">
+          <!-- Food: Header -->
           <div class="pr-10 pl-10 pt-10">
             <span class="inline text-4xl pr-2">&#127790;</span>
             <h2 class="inline font-bold text-5xl text-orange-400 pr-2 pl-2">
@@ -203,16 +228,134 @@
             </ul>
           </div>
         </div>
+          <!-- End Header-->
 
-        <!-- Right Column: Movie -->
-        <div class="bg-sky-700 box-border h-screen">
+          <!-- Food: Blue Content Container -->
+          <div
+            class="flex justify-center h-4/6 overflow-auto bg-sky-300 m-10 rounded-lg shadow-lg"
+          >
+            <!-- Food: Content -->
+            <ul class="pt-2 pb-2">
+              <!-- Food: Card -->
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-5">
+                    <h5 class="text-gray-800 text-xl font-medium mb-3">
+                      Movie Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-3">
+                      Address: <span class="">Placeholder</span>
+                      <br>
+                      Website: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- End Card -->
+              <!-- Food: Card -->
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-5">
+                    <h5 class="text-gray-800 text-xl font-medium mb-3">
+                      Movie Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-3">
+                      Address: <span class="">Placeholder</span>
+                      <br>
+                      Website: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- End Card -->
+              <!-- Food: Card -->
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-5">
+                    <h5 class="text-gray-800 text-xl font-medium mb-3">
+                      Movie Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-3">
+                      Address: <span class="">Placeholder</span>
+                      <br>
+                      Website: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- End Card -->
+              <!-- Food: Card -->
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-5">
+                    <h5 class="text-gray-800 text-xl font-medium mb-3">
+                      Movie Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-3">
+                      Address: <span class="">Placeholder</span>
+                      <br>
+                      Website: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- End Card -->
+              <!-- Food: Card -->
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-5">
+                    <h5 class="text-gray-800 text-xl font-medium mb-3">
+                      Movie Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-3">
+                      Address: <span class="">Placeholder</span>
+                      <br>
+                      Website: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- End Card -->
+            </ul>
+            <!--End Food Content-->
+          </div>
+          <!-- End Blue Content Container-->
+        </div>
+        <!-- End Food -->
+
+        <!-- Movie -->
+        <div class="bg-sky-700 box-border h-screen w-screen">
+          <!-- Movie: Header -->
           <div class="pr-10 pl-10 pt-10">
             <span class="inline text-3xl pr-2">&#127909;</span>
             <h2 class="inline font-bold text-5xl text-sky-300">Movies</h2>
             <span class="inline text-3xl pl-2">&#127909;</span>
           </div>
+          <!-- End Header-->
+
+          <!-- Movie: Orange Content Container -->
           <div
-            class="flex justify-center h-3/4 overflow-auto bg-orange-100 m-10 rounded-lg shadow-lg"
+            class="flex justify-center h-4/6 overflow-auto bg-orange-100 m-10 rounded-lg shadow-lg"
           >
           <ul class="pt-5 pb-5" id="movies">
             <div class="p-10">
@@ -237,10 +380,119 @@
               </li>
             </div>
           </ul>
+            <!-- Movie Content-->
+            <ul class="pt-2 pb-2">
+              <!-- Movie: Card -->
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-5">
+                    <h5 class="text-gray-800 text-xl font-medium mb-3">
+                      Movie Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-3">
+                      Theater: <span class="">Placeholder</span>
+                      <br>
+                      Showtimes: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- End Movie Card -->
+              <!-- Movie: Card -->
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-5">
+                    <h5 class="text-gray-800 text-xl font-medium mb-3">
+                      Movie Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-3">
+                      Theater: <span class="">Placeholder</span>
+                      <br>
+                      Showtimes: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- End Movie Card -->
+              <!-- Movie: Card -->
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-5">
+                    <h5 class="text-gray-800 text-xl font-medium mb-3">
+                      Movie Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-3">
+                      Theater: <span class="">Placeholder</span>
+                      <br>
+                      Showtimes: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- End Movie Card -->
+              <!-- Movie: Card -->
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-5">
+                    <h5 class="text-gray-800 text-xl font-medium mb-3">
+                      Movie Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-3">
+                      Theater: <span class="">Placeholder</span>
+                      <br>
+                      Showtimes: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- End Movie Card -->
+              <!-- Movie: Card -->
+              <div class="p-10">
+                <li class="rounded-lg shadow-lg bg-white max-w-sm">
+                  <img
+                    class="rounded-lg"
+                    src="./assets/images/placeholder.png"
+                  />
+                  <div class="p-5">
+                    <h5 class="text-gray-800 text-xl font-medium mb-3">
+                      Movie Name
+                    </h5>
+                    <p class="text-gray-800 text-base mb-3">
+                      Theater: <span class="">Placeholder</span>
+                      <br>
+                      Showtimes: <span class="">Placeholder</span>
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- End Movie Card -->
+            </ul>
+            <!-- End Movie Content -->
           </div>
+          <!-- End Orange Content Container-->
         </div>
+        <!-- End Movie -->
       </div>
+      <!-- End Body Section -->
     </main>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.3/dayjs.min.js"></script>
     <script src="./assets/js/script.js"></script>
