@@ -47,7 +47,7 @@ var getBreweries = function (zip) {
 var getMovies = function (zip) {
   // format the movies api url
   var apiMoviesUrl =
-    "http://data.tmsapi.com/v1.1/movies/showings?startDate=" +
+    "https://data.tmsapi.com/v1.1/movies/showings?startDate=" +
     formattedDate +
     "&zip=" +
     zip +
