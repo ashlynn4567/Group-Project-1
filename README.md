@@ -29,7 +29,7 @@ This is how the main page appears to users. The page is responsive, adapting to 
 
 ## Deployed Site
 
-<a href="">Plan the perfect night out!<a>
+<a href="https://ashlynn4567.github.io/Group-Project-1/">Plan the perfect night out!<a>
 
 ## Suggestion Box
 
