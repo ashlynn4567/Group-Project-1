@@ -208,7 +208,7 @@ $("#submit").on("click", formSubmitHandler);
 /// Put this function anywhere globally
 function setLocalStorage () {
   /// get the zipcode
-  const zipcode = document.getElementById("input-zipcode").value.trim
+  const zipcode = document.getElementById("input-zipcode").value.trim()
 
 localStorage.setItem("lastsearched", JSON.stringify(zipcode));
 }
