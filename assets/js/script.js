@@ -1,10 +1,14 @@
-// at the beginning of the pageload check local storage
-var previousSearched = localStorage.getItem("lastsearched");
+// See results notification after clicking submit
+var seeResults = function () {
+  $("#see-results").text("Scroll down to see your results!");
 
-if (previousSearched) {
-  // once the history box is made change elementId
-  $("#input-zipcode").text(localStorage.getItem("lastsearched"));
-}
+  $("#see-results").show();
+
+  // Change to "Showing results for..." after 5 seconds
+  setTimeout(function () {
+    $("#see-results").text("Showing results for " + lastsearched);
+  }, 3000);
+};
 
 // get zipcode from input form
 var zipInputEl = document.querySelector("#input-zipcode");
@@ -25,11 +29,7 @@ var formSubmitHandler = function (event) {
 
     zipInputEl.value = "";
 
-    var seeResultsP = $("<p>")
-      .addClass("text-gray-800 text-base mt-6 font-bold")
-      .text("Scroll down to see your results!");
-
-    $("#enter-zip-form").append(seeResultsP);
+    seeResults();
   } else {
     alert("Please enter a zip code");
   }
@@ -218,31 +218,31 @@ function setLocalStorage() {
   const zipcode = document.getElementById("input-zipcode").value.trim();
 
   localStorage.setItem("lastsearched", JSON.stringify(zipcode));
+
+  // display button for last searched zip
+  loadLastsearched();
 }
 
 // Load last searched zip code
 var loadLastsearched = function () {
   lastsearched = JSON.parse(localStorage.getItem("lastsearched"));
 
-  // create button
-  var lastsearchedBtn = $("<button>")
-    .addClass(
-      "w-full px-6 py-2.5 bg-blue-700 text-white font-medium text-xs leading-tight rounded shadow-md hover:bg-orange-400 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mt-6"
-    )
-    .attr("type", "submit")
-    .attr("id", "last-searched-btn")
-    .text("Last Searched: " + lastsearched);
+  // create empty string if nothing saved in local storage
+  if (!lastsearched) {
+    lastsearched = "";
+  } else {
+    // display results for last searched zip
+    getBreweries(lastsearched);
+    getMovies(lastsearched);
 
-  $("#enter-zip-form").append(lastsearchedBtn);
+    // clear previous saved zip
+    $("#last-searched-button").empty();
+
+    $("#see-results").text("Showing results for " + lastsearched);
+  }
 };
 
 loadLastsearched();
 
-// event handlers
+// event handler
 $("#submit").on("click", formSubmitHandler);
-
-$("#last-searched-btn").on(
-  "click",
-  getBreweries(lastsearched),
-  getMovies(lastsearched)
-);
