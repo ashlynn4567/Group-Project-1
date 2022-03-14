@@ -1,10 +1,10 @@
- //// at the beginning of the pageload check local storage
- var previousSearched = localStorage.getItem("lastsearched");
+//// at the beginning of the pageload check local storage
+var previousSearched = localStorage.getItem("lastsearched");
 
- if(previousSearched){
-   /// once the history box is made change elementId
-   $("#input-zipcode").text(localStorage.getItem("lastsearched"));
- }
+if (previousSearched) {
+  /// once the history box is made change elementId
+  $("#input-zipcode").text(localStorage.getItem("lastsearched"));
+}
 // get zipcode from input form
 var zipInputEl = document.querySelector("#input-zipcode");
 
@@ -13,7 +13,7 @@ var formSubmitHandler = function (event) {
   // prevent page from refreshing
   event.preventDefault();
   /// setting the last searched zipcode
-  setLocalStorage()
+  setLocalStorage();
 
   // get value from input element
   var zipCode = zipInputEl.value.trim();
@@ -23,6 +23,12 @@ var formSubmitHandler = function (event) {
     getMovies(zipCode);
 
     zipInputEl.value = "";
+
+    var seeResultsP = $("<p>")
+      .addClass("text-gray-800 text-base mt-6 font-bold")
+      .text("Scroll down to see your results!");
+
+    $("#enter-zip-form").append(seeResultsP);
   } else {
     alert("Please enter a zip code");
   }
@@ -208,10 +214,9 @@ var displayMovies = function (moviesData) {
 // event handler
 $("#submit").on("click", formSubmitHandler);
 /// Put this function anywhere globally
-function setLocalStorage () {
+function setLocalStorage() {
   /// get the zipcode
-  const zipcode = document.getElementById("input-zipcode").value.trim()
+  const zipcode = document.getElementById("input-zipcode").value.trim();
 
-localStorage.setItem("lastsearched", JSON.stringify(zipcode));
+  localStorage.setItem("lastsearched", JSON.stringify(zipcode));
 }
-
