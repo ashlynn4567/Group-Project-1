@@ -1,10 +1,11 @@
-//// at the beginning of the pageload check local storage
+// at the beginning of the pageload check local storage
 var previousSearched = localStorage.getItem("lastsearched");
 
 if (previousSearched) {
-  /// once the history box is made change elementId
+  // once the history box is made change elementId
   $("#input-zipcode").text(localStorage.getItem("lastsearched"));
 }
+
 // get zipcode from input form
 var zipInputEl = document.querySelector("#input-zipcode");
 
@@ -211,12 +212,37 @@ var displayMovies = function (moviesData) {
   });
 };
 
-// event handler
-$("#submit").on("click", formSubmitHandler);
-/// Put this function anywhere globally
+// Save last searched zip code to local storage
 function setLocalStorage() {
-  /// get the zipcode
+  // get the zipcode
   const zipcode = document.getElementById("input-zipcode").value.trim();
 
   localStorage.setItem("lastsearched", JSON.stringify(zipcode));
 }
+
+// Load last searched zip code
+var loadLastsearched = function () {
+  lastsearched = JSON.parse(localStorage.getItem("lastsearched"));
+
+  // create button
+  var lastsearchedBtn = $("<button>")
+    .addClass(
+      "w-full px-6 py-2.5 bg-blue-700 text-white font-medium text-xs leading-tight rounded shadow-md hover:bg-orange-400 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mt-6"
+    )
+    .attr("type", "submit")
+    .attr("id", "last-searched-btn")
+    .text("Last Searched: " + lastsearched);
+
+  $("#enter-zip-form").append(lastsearchedBtn);
+};
+
+loadLastsearched();
+
+// event handlers
+$("#submit").on("click", formSubmitHandler);
+
+$("#last-searched-btn").on(
+  "click",
+  getBreweries(lastsearched),
+  getMovies(lastsearched)
+);
