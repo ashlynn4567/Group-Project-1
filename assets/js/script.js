@@ -60,7 +60,9 @@ var getMovies = function (zip) {
     formattedDate +
     "&zip=" +
     zip +
-    "&api_key=yhya8sn6myd6z9exxw4538ph";
+    "&api_key=z5sq89ny4cppt4xqgkd44rtw";
+
+  //&api_key=yhya8sn6myd6z9exxw4538ph
 
   // make a request to url
   fetch(apiMoviesUrl)
