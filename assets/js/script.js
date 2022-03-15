@@ -1,5 +1,11 @@
 // get zipcode from input form
 var zipInputEl = document.querySelector("#input-zipcode");
+//modal logic 
+let modal1 = document.getElementById('modal1')
+let btn = document.getElementById('btn')
+btn.onclick = function (){
+  modal1.classList.add('hidden')
+}
 
 // search form submit handler
 var formSubmitHandler = function (event) {
@@ -15,7 +21,7 @@ var formSubmitHandler = function (event) {
 
     zipInputEl.value = "";
   } else {
-    alert("Please enter a zip code");
+    modal1.classList.remove('hidden')
   }
 };
 
