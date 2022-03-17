@@ -15,7 +15,6 @@ This project was built using HTML, CSS, JavaScript, jQuery, Tailwind CSS, Open B
 This is how the main page appears to users. The page is responsive, adapting to multiple screen sizes.
 
 <p align="center">
-<img src="./assets/images/homepage1-desktop.JPG"/>
 <img src="./assets/images/homepage2-desktop.JPG"/>
 <img src="./assets/images/homepage3-desktop.JPG"/>
 <img src="./assets/images/homepage1-mobile.JPG"/>
