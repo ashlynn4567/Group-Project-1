@@ -1,10 +1,30 @@
+// See results notification after clicking submit
+var seeResults = function () {
+  $("#see-results").text("Scroll down to see your results!");
+
+  $("#see-results").show();
+
+  // Change to "Showing results for..." after 5 seconds
+  setTimeout(function () {
+    $("#see-results").text("Showing results for " + lastsearched);
+  }, 3000);
+};
+
 // get zipcode from input form
 var zipInputEl = document.querySelector("#input-zipcode");
+//modal logic 
+let modal1 = document.getElementById('modal1')
+let btn = document.getElementById('btn')
+btn.onclick = function (){
+  modal1.classList.add('hidden')
+}
 
 // search form submit handler
 var formSubmitHandler = function (event) {
   // prevent page from refreshing
   event.preventDefault();
+  /// setting the last searched zipcode
+  setLocalStorage();
 
   // get value from input element
   var zipCode = zipInputEl.value.trim();
@@ -14,8 +34,10 @@ var formSubmitHandler = function (event) {
     getMovies(zipCode);
 
     zipInputEl.value = "";
+
+    seeResults();
   } else {
-    alert("Please enter a zip code");
+    modal1.classList.remove('hidden')
   }
 };
 
@@ -51,7 +73,9 @@ var getMovies = function (zip) {
     formattedDate +
     "&zip=" +
     zip +
-    "&api_key=yhya8sn6myd6z9exxw4538ph";
+    "&api_key=z5sq89ny4cppt4xqgkd44rtw";
+
+  //&api_key=yhya8sn6myd6z9exxw4538ph
 
   // make a request to url
   fetch(apiMoviesUrl)
@@ -193,6 +217,38 @@ var displayMovies = function (moviesData) {
     $("#movies").append(movieCard);
   });
 };
+
+// Save last searched zip code to local storage
+function setLocalStorage() {
+  // get the zipcode
+  const zipcode = document.getElementById("input-zipcode").value.trim();
+
+  localStorage.setItem("lastsearched", JSON.stringify(zipcode));
+
+  // display button for last searched zip
+  loadLastsearched();
+}
+
+// Load last searched zip code
+var loadLastsearched = function () {
+  lastsearched = JSON.parse(localStorage.getItem("lastsearched"));
+
+  // create empty string if nothing saved in local storage
+  if (!lastsearched) {
+    lastsearched = "";
+  } else {
+    // display results for last searched zip
+    getBreweries(lastsearched);
+    getMovies(lastsearched);
+
+    // clear previous saved zip
+    $("#last-searched-button").empty();
+
+    $("#see-results").text("Showing results for " + lastsearched);
+  }
+};
+
+loadLastsearched();
 
 // event handler
 $("#submit").on("click", formSubmitHandler);

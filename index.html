@@ -39,7 +39,7 @@
       <!--Header: Input Form-->
       <div class="pl-10 pr-10 pt-10 pb-20 flex justify-center">
         <div class="block p-10 rounded-lg shadow-lg bg-orange-100 max-w-sm">
-          <form>
+          <form id="enter-zip-form">
             <!--Header Input Form: Zip Code-->
             <div class="form-group mb-6">
               <label
@@ -57,44 +57,7 @@
               />
             </div>
             <!--End Zip Code-->
-            <!--Header Input Form: Checkboxes-->
-            <div class="flex justify-center mb-6">
-              <div>
-                <!--Restaurant Checkbox-->
-                <div class="form-check mb-2">
-                  <input
-                    class="form-check-input appearance-none h-4 w-4 border border-2 border-sky-700 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    type="checkbox"
-                    value=""
-                    id="include-restaurants"
-                  />
-                  <label
-                    class="form-check-label inline-block text-gray-800"
-                    for="restaurant"
-                  >
-                    Include Restaurants
-                  </label>
-                </div>
-                <!--End Restaurant Checkbox-->
-                <!--Movie Checkbox-->
-                <div class="form-check">
-                  <input
-                    class="form-check-input ml-2 appearance-none h-4 w-4 border border-2 border-sky-700 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    type="checkbox"
-                    value=""
-                    id="include-movies"
-                  />
-                  <label
-                    class="form-check-label inline-block text-gray-800"
-                    for="movies"
-                  >
-                    Include Movies
-                  </label>
-                </div>
-                <!--End Movie Checkbox-->
-              </div>
-            </div>
-            <!--End Checkboxes-->
+
             <!--Submit Button-->
             <button
               type="submit"
@@ -104,6 +67,16 @@
               Submit
             </button>
             <!--End Submit Button-->
+
+            <!--Last Searched Button-->
+            <div id="last-searched-button"></div>
+            <!--End Last Searched Button-->
+
+            <!--See Results Notification-->
+            <p
+              class="text-gray-800 text-base mt-6 font-bold"
+              id="see-results"
+            ></p>
           </form>
         </div>
       </div>
@@ -118,11 +91,11 @@
         <div class="bg-orange-100 box-border h-screen w-screen">
           <!-- Food: Header -->
           <div class="pr-10 pl-10 pt-10">
-            <span class="inline text-4xl pr-2">&#127790;</span>
+            <span class="inline text-4xl pr-2">&#127866;</span>
             <h2 class="inline font-bold text-5xl text-orange-400 pr-2 pl-2">
-              Food
+              Beer
             </h2>
-            <span class="inline text-4xl">&#127790;</span>
+            <span class="inline text-4xl">&#127866;</span>
           </div>
           <!-- End Header-->
 
@@ -135,19 +108,10 @@
               <!-- Food: Card -->
               <div class="p-10">
                 <li class="rounded-lg shadow-lg bg-white max-w-sm">
-                  <img
-                    class="rounded-lg"
-                    src="./assets/images/placeholder.png"
-                  />
                   <div class="p-5">
                     <h5 class="text-gray-800 text-xl font-medium mb-3">
-                      Movie Name
+                      Enter your zip code above to find local breweries!
                     </h5>
-                    <p class="text-gray-800 text-base mb-3">
-                      Address: <span class="">Placeholder</span>
-                      <br />
-                      Website: <span class="">Placeholder</span>
-                    </p>
                   </div>
                 </li>
               </div>
@@ -178,20 +142,10 @@
               <!-- Movie: Card -->
               <div class="p-10">
                 <li class="rounded-lg shadow-lg bg-white max-w-sm">
-                  <img
-                    class="rounded-lg"
-                    src="./assets/images/placeholder.png"
-                  />
                   <div class="p-6">
                     <h5 class="text-gray-800 text-xl font-medium mb-5">
-                      Movie Name
+                      Enter your zip code above to find local movie times!
                     </h5>
-                    <ul>
-                      <li>
-                        <p class="text-gray-800 text-base mb-4">Theater:</p>
-                        <p class="text-gray-800 text-base mb-4">Theater:</p>
-                      </li>
-                    </ul>
                   </div>
                 </li>
               </div>
@@ -205,6 +159,33 @@
       </div>
       <!-- End Body Section -->
     </main>
+    <!-- da modal -->
+<div class="fixed z-10 inset-0 overflow-y-auto hidden" id="modal1" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+  <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+    <div class=" fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+    <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+    <div class="relative inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+      <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+        <div class="sm:flex sm:items-start">
+          <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+            <svg class="h-6 w-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+            <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">please enter a zip code</h3>
+            <div class="mt-2">
+              <p class="text-sm text-gray-500">if you dont enter a zip code we cant even be friends</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+        <button id='btn' type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.3/dayjs.min.js"></script>
