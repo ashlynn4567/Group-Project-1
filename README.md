@@ -32,8 +32,8 @@ The user is able to click on the website link in the Brewery data to be redirect
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [jQuery](https://jquery.com/)
-- [Tailwind CSS](https://tailwindcss.com/">Tailwind CSS Framework)
-- [Open Brewery DB - a third-party API](https://www.openbrewerydb.org/">Open Brewery DB)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Open Brewery DB - a third-party API](https://www.openbrewerydb.org)
 - [Gracenote - a third-party API](https://developer.tmsapi.com/Getting_Started)
 
 ## Deployed Site
