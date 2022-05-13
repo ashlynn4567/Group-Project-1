@@ -30,7 +30,7 @@ The user is able to click on the website link in the Brewery data to be redirect
 
 ## Deployed Site
 
-<a href="https://ashlynn4567.github.io/Group-Project-1/">Plan the perfect night out!<a>
+<a href="https://ashlynn4567.github.io/GroupProject1-PerfectNightOut/">Plan the perfect night out!<a>
 
 ## Suggestion Box
 
