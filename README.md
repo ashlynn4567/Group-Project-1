@@ -10,8 +10,6 @@ As our group built this project, our greatest challenge was locating an API that
 
 ## Usage and Features
 
-This project was built using HTML, CSS, JavaScript, jQuery, Tailwind CSS, Open Brewery DB (a third-party API), and Gracenote (a third-party API).
-
 This is how the main page appears to users. The page is responsive, adapting to multiple screen sizes.
 
 <p align="center">
@@ -27,6 +25,16 @@ The user enters their zip code in the search bar at the top of the screen. Once 
 The user is able to click on the website link in the Brewery data to be redirected to that brewery's website. They can also click on the title of the Movie to find a summary website page, along with a trailer for that particular movie.
 
 <p align="center"><img src="./assets/images/Group-Project-1-Links.gif"/></p>
+
+## Built With
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [jQuery](https://jquery.com/)
+- [Tailwind CSS](https://tailwindcss.com/">Tailwind CSS Framework)
+- [Open Brewery DB (third-party API)](https://www.openbrewerydb.org/">Open Brewery DB)
+- [Gracenote (third-party API)](https://developer.tmsapi.com/Getting_Started)
 
 ## Deployed Site
 
@@ -54,10 +62,6 @@ In the future, we would like to add the following improvements:
 | - [Github](https://github.com/ashlynn4567)          | - [Github](https://github.com/kelseyalderman)                       | - [Github](https://github.com/ShibuyaCho)                                | - [Github](https://github.com/mo9399)                            |
 | - [LinkedIn](www.linkedin.com/in/Ashley-Lynn-Smith) | - [LinkedIn](https://www.linkedin.com/in/kelsey-alderman-79019922b) | - [LinkedIn](https://www.linkedin.com/mwlite/in/jackson-mason-28b043228) | - [LinkedIn](http://linkedin.com/in/mohamed-abdullahi-944b2922b) |
 
-### Acknowledgements
+### Credits
 
-1. Special thanks to the following programming resources:
-   - <a href="https://tailwindcss.com/">Tailwind CSS Framework</a>
-   - <a href="https://www.openbrewerydb.org/">Open Brewery DB</a>
-   - <a href="https://developer.tmsapi.com/Getting_Started">Gracenote API</a>
-2. This project was built with the help of the University of Oregon's Coding Boot Camp.
+This project was built with the help of the University of Oregon's Coding Boot Camp.
