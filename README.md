@@ -1,48 +1,57 @@
-# Group Project 1 - Perfect Night Out
+# Perfect Night Out
 
-### Just enter your zip code and find a nearby rendezvous!
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Table-of-Contents
+
+- [Description](#description)
+- [Deployed Site](#deployed-site)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Future Development](#future-development)
+- [Credits](#credits)
+
+## Description
 
 Have you ever wanted to plan a night out with your friends, but found yourself spending a ton of time looking up different places you could go? Well with this app, you can enter your zip code and find results for local breweries and movie theaters near you! When looking at your results in the Brewery section, Breweries are listed by location name, with their address and websites listed as well.
 
-For this project, we styled each section using the Tailwind CSS Framework. It is sleek and robust, with many functions that fit our needs. It was a challenge to read through the documentation and teach ourselves a completely new technology, but once we passed the learning curve, we found it to be flexible and easy to use.
+## Deployed Site
 
-As our group built this project, our greatest challenge was locating an API that was well documented, free, and didn't result in any server errors. It made us realize the diversity that we could expect to find in third party APIs throughout our software development careers. We ended up having to adjust our project several times before we found tools that suited our needs. Once we decided on our APIs and got our styling in place, the rest of the project went without issue.
+Follow [this link](https://ashlynn4567.github.io/Perfect-Night-Out/) to view and use our site!
 
-## Usage and Features
+## Features
 
 This is how the main page appears to users. The page is responsive, adapting to multiple screen sizes.
 
 <p align="center">
-<img src="./assets/images/homepage1-mobile.JPG"/>
-<img src="./assets/images/homepage2-mobile.JPG"/>
-<img src="./assets/images/homepage3-mobile.JPG"/>
+<img alt="A screenshot of the homepage of Perfect Night Out. It pictures a text entry box for which users can enter their zipcode to search for breweries and movie premiers near them. " src="./assets/images/perfect-night-out-screenshot.jpg"/>
 </p>
 
 The user enters their zip code in the search bar at the top of the screen. Once the user has input a zipcode, the brewery section will refresh with data showing local breweries near the given zip code. Both the theater and brewery section have their own scrolling functionality.
 
-<p align="center"><img src="./assets/images/Group-Project-1.gif"/></p>
+<p align="center">
+<img alt="A demonstration gif of the user entering a zip code into the text box near the top. Results automatically populate in the sections below, and users can scroll through the results." src="./assets/images/perfect-night-out-demo.gif"/>
+</p>
 
 The user is able to click on the website link in the Brewery data to be redirected to that brewery's website. They can also click on the title of the Movie to find a summary website page, along with a trailer for that particular movie.
 
-<p align="center"><img src="./assets/images/Group-Project-1-Links.gif"/></p>
+<p align="center">
+<img alt="A demonstration gif showing that if users click on the search results, they are brought to an external page with more information about that brewery or movie. " src="./assets/images/perfect-night-out-demo-2.gif"/>
+</p>
 
-## Built With
+## Technologies
 
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- HTML
+- CSS
+- JavaScript
 - [jQuery](https://jquery.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Open Brewery DB - a third-party API](https://www.openbrewerydb.org)
-- [Gracenote - a third-party API](https://developer.tmsapi.com/Getting_Started)
+- [Open Brewery DB](https://www.openbrewerydb.org/)
+- [Gracenote API](https://developer.tmsapi.com/Getting_Started)
 
-## Deployed Site
+## Future Development
 
-<a href="https://ashlynn4567.github.io/GroupProject1-PerfectNightOut/">Plan the perfect night out!<a>
-
-## Suggestion Box
-
-In the future, we would like to add the following improvements:
+In the future, I would like to add the following improvements:
 
 - Add an API that provides restaurants along with the breweries.
 - Provide an option to make a reservation at a brewery or a restaurant.
@@ -65,3 +74,7 @@ In the future, we would like to add the following improvements:
 ### Acknowledgements
 
 This project was built with the help of the University of Oregon's Coding Boot Camp.
+
+## Licensing
+
+The application is covered under the following license: [MIT](https://opensource.org/licenses/MIT)
