@@ -62,6 +62,8 @@ In the future, I would like to add the following improvements:
 - Add the ability to save favorite breweries or theaters.
 - Add additional searches based on user feedback.
 
+We're always interested in refactoring code to improve it's functionality. If you would like to suggest your own improvements, you can reach our development team at the links below.
+
 ## Credits
 
 ### Contributers
