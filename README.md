@@ -71,7 +71,7 @@ We're always interested in refactoring code to improve it's functionality. If yo
 | **Ashley Smith**                                    | **Kelsey Alderman**                                                 | **Jackson Mason**                                                        | **Mohamed Abdullahi**                                            |
 | --------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------- |
 | - [Github](https://github.com/ashlynn4567)          | - [Github](https://github.com/kelseyalderman)                       | - [Github](https://github.com/ShibuyaCho)                                | - [Github](https://github.com/mo9399)                            |
-| - [LinkedIn](www.linkedin.com/in/Ashley-Lynn-Smith) | - [LinkedIn](https://www.linkedin.com/in/kelsey-alderman-79019922b) | - [LinkedIn](https://www.linkedin.com/mwlite/in/jackson-mason-28b043228) | - [LinkedIn](http://linkedin.com/in/mohamed-abdullahi-944b2922b) |
+| - [LinkedIn](https://www.linkedin.com/in/ashley-lynn-smith/) | - [LinkedIn](https://www.linkedin.com/in/kelsey-alderman-79019922b) | - [LinkedIn](https://www.linkedin.com/mwlite/in/jackson-mason-28b043228) | - [LinkedIn](https://linkedin.com/in/mohamed-abdullahi-944b2922b) |
 
 ### Acknowledgements
 
